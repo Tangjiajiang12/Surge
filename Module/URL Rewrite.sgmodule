@@ -3,8 +3,6 @@
 #!system=ios
 
 [URL Rewrite]
-# Redirect Google Search Service
-^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
 
 # Redirect HTTP to HTTPS
 ^https?:\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
@@ -67,11 +65,7 @@
 ^https://(\w*).(m.)?wikipedia.org/wiki https://www.wikiwand.com/$1 302
 
 # Advertising Block
-# 0~9
-# > 21经济
-^https?:\/\/api\.21jingji\.com\/ad\/ - reject
-# > 360doc
-^https?:\/\/mobi\.360doc\.com\/v\d{2}\/Ajax\/festival\.ashx\?op=getfestivaltheme - reject
+
 # > 58同城
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv)\/ - reject
 ^https?:\/\/app\.58\.com\/api\/home\/invite\/popupAdv - reject
@@ -130,35 +124,9 @@
 ^https?:\/\/www\.myhug\.cn\/ad\/ - reject
 # > 百词斩
 ^https?:\/\/7n\.bczcdn\.com\/launchad\/ - reject
-# > 贝太厨房
-^https?:\/\/channel\.beitaichufang\.com\/channel\/api\/v\d\/promote\/ios\/start\/page - reject
-# > 币世界
-^https?:\/\/iapi\.bishijie\.com\/actopen\/advertising\/ - reject
-# > 贝壳找房
-^https?:\/\/app\.api\.ke\.com\/config\/config\/bootpage - reject
-# > 薄荷
-^https?:\/\/status\.boohee\.com\/api\/v\d\/app_square\/start_up_with_ad - reject
+
 
 # C
-# > CNTV
-^https?:\/\/cntv\.hls\.cdn\.myqcloud\.com\/.+\?maxbr=850 - reject
-^https?:\/\/asp\.cntv\.myalicdn\.com\/.+\?maxbr=850 - reject
-^https?:\/\/www\.cntv\.cn\/nettv\/adp\/ - reject
-^https?:\/\/v\.cctv\.com\/.+850 - reject
-# > 车来了
-^https?:\/\/api\.chelaile\.net\.cn\/adpub\/ - reject
-# ^https?:\/\/(api|atrace)\.chelaile\.net\.cn\/adpub\/ - reject
-^https?:\/\/api\.chelaile\.net\.cn\/goocity\/advert\/ - reject
-# ^https?:\/\/atrace\.chelaile\.net\.cn\/exhibit\?&adv_image - reject
-^https?:\/\/pic\d\.chelaile\.net\.cn\/adv\/ - reject
-# > 曹操出行
-^https?:\/\/cap\.caocaokeji\.cn\/advert-bss\/ - reject
-# > 财经
-^https?:\/\/api\.caijingmobile\.com\/(ad|advert)\/ - reject
-# > 超级课程表
-^https?:\/\/.+/V\d\/splash\/getSplashV\d\.action - reject
-# > 超级星饭团
-^https?:\/\/g\.cdn\.pengpengla\.com\/starfantuan\/boot-screen-info\/ - reject
 
 # D
 # > 豆瓣 (154.8.131.* 自签证书不可用)
@@ -168,37 +136,15 @@
 # > 当当
 ^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init - reject
 ^https?:\/\/e\.dangdang\.com\/.+getDeviceStartPage - reject
-# > 蛋蛋赞
-^https?:\/\/www\.dandanzan\.com\/res\/gdsefse\.js - reject
 # > 叨鱼
 ^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd - reject
 # > 丁香医生
 ^https?:\/\/dxy\.com\/app\/i\/ask\/biz\/feed\/launch - reject
-# > 嘀嗒出行
-^https?:\/\/capis(-slb)?\.didapinche\.com\/ad\/ - reject
-^https?:\/\/www\.didapinche\.com\/app\/adstat\/ - reject
-# > 电视家
-^https?:\/\/api\.gaoqingdianshi\.com\/api\/v\d\/ad\/ - reject
+
 
 # E
-# > 艺龙 (123.59.31.1,119.18.193.135)
-# (仅 Surge 可用因其支持 force-http-engine-hosts)
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/(adgateway|adv)\/ - reject
-# > e代驾
-^https?:\/\/pic\.edaijia\.cn\/adsplash\/ - reject
 
 # F
-# > Foodie
-^https?:\/\/foodie-api\.yiruikecorp\.com\/v\d\/(banner|notice)\/overview - reject
-# > FOTOABLE
-^https?:\/\/cdn\.api\.fotoable\.com\/Advertise\/ - reject
-# > 飞客茶馆
-^https?:\/\/www\.flyertea\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis - reject
-# > 飞常准
-^https?:\/\/app\.variflight\.com\/ad\/ - reject
-^https?:\/\/app\.variflight\.com\/v\d\/advert\/ - reject
-# > 凤凰秀
-^https:\/\/dsa-mfp\.fengshows\.cn\/mfp\/mfpMultipleDelivery\.do\?.+adunitid - reject
 
 # G
 # > Google
@@ -218,20 +164,12 @@
 ^https?:\/\/business\.msstatic\.com\/advertiser\/ - reject
 # > 韩剧社
 ^https?:\/\/47\.97\.20\.12\/ad\/ - reject
-# > 火猫
-^https?:\/\/api\.huomao\.com\/channels\/loginAd - reject
-# > HiveBox
-^https?:\/\/consumer\.fcbox\.com\/v\d\/ad\/ - reject
-# > 好好住
-^https?:\/\/api\.haohaozhu\.cn\/index\.php\/home\/AppInit\/getStartPhoto - reject
 # > 花生地铁
 ^https?:\/\/cmsapi\.wifi8\.com\/v\d\/(emptyAd|adNew)\/ - reject
 
 # I
 # > 讯飞
 ^https?:\/\/imeclient\.openspeech\.cn\/adservice\/ - reject
-# > 好体知
-^https?:\/\/www\.bodivis\.com\.cn\/app\/splashAdvertise - reject
 
 # J
 # > 京东
@@ -249,29 +187,12 @@
 ^https?:\/\/ios\.wps\.cn\/ad-statistics-service - reject
 ^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ - reject
 ^https?:\/\/\w+\.kingsoft-office-service\.com\/ad - reject
-# > 金山词霸
-^https?:\/\/dict-mobile\.iciba\.com\/interface\/index\.php\?.+(c=ad|collectFeedsAdShowCount|KSFeedsAdCardViewController) - reject
-^https?:\/\/service\.iciba\.com\/popo\/open\/screens\/v\d\?adjson - reject
 
 # K
 # > Keep
 ^https?:\/\/api\.gotokeep\.com\/ads - reject
-# > 快看漫画
-^https?:\/\/api\.kkmh\.com\/.+(ad|advertisement)\/ - reject
-# > 酷我 (122.14.246.33,175.102.178.52)
-# (仅 Surge 可用因其支持 force-http-engine-hosts)
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/MobileAdServer\/ - reject
-^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/EcomResourceServer/AdPlayPage/adinfo - reject
-# > 看理想
-^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/advertisement - reject
 
 # L
-# > 乐视
-^https?:\/\/.+\/letv-gug\/ - reject
-# > 来疯直播
-^https?:\/\/api\.laifeng\.com\/v\d\/start\/ads - reject
-# > 懒投资
-^https?:\/\/ios\.lantouzi\.com\/api\/startpage - reject
 
 # M
 # > 小米
@@ -279,21 +200,11 @@
 ^https?:\/\/api\.jr\.mi\.com\/v\d\/adv\/ - reject
 ^https?:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen - reject
 ^https?:\/\/api-mifit.+\.huami\.com\/discovery\/mi\/discovery\/.+_ad\? - reject
-# > 蘑菇租房
-^https?:\/\/api\.mgzf\.com\/renter-operation\/home\/startHomePage - reject
-# > 墨迹天气
-^https?:\/\/cdn\.moji\.com\/(adoss|adlink)\/ - reject
-# > 埋堆堆
-^https?:\/\/mob\.mddcloud\.com\.cn\/api\/(ad|advert)\/ - reject
-# > 漫画人
-^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/public\/getStartPageAds - reject
 # > 美团
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/.+\.(gif|jpg|jpg\.webp)$ - reject
 ^https?:\/\/p\d\.meituan\.net\/wmbanner\/[A-Za-z0-9]+\.jpg - reject
 ^https?:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+\.jpg\?may_covertWebp - reject
 ^https?:\/\/s3plus\.meituan\.net\/.+\/linglong\/.+\.(gif|jpg|mp4) - reject
-# > 美味不用等
-^https?:\/\/capi.mwee.cn/app-api/V\d{2}/app/(ad|getstartad) - reject
 # > 秒拍
 ^https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad/ - reject
 # > 马蜂窝
@@ -301,12 +212,6 @@
 ^https?:\/\/mapi\.mafengwo\.cn\/travelguide\/ad\/ - reject
 
 # N
-# > 爱南宁
-^https?:\/\/nnapp\.cloudbae\.cn\/mc\/api\/advert/ - reject
-# > NationalGeographic
-^https?:\/\/dili\.bdatu\.com\/jiekou\/ad\/ - reject
-# > NationalGeographicChina
-^https?:\/\/wap\.ngchina\.cn\/news\/adverts\/ - reject
 
 # O
 # > ofo
@@ -314,12 +219,8 @@
 ^https?:\/\/ma\.ofo\.com\/ads\/ - reject
 ^https?:\/\/activity2\.api\.ofo\.com\/ofo\/Api\/v2\/ads - reject
 ^https?:\/\/ma\.ofo\.com\/adImage\/ - reject
-# > Oray
-^https?:\/\/slapi\.oray\.net\/client\/ad - reject
 
 # P
-# > 票根
-^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ - reject
 # > 拼多多
 ^https?:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash - reject
 
@@ -331,8 +232,6 @@
 ^https?:\/\/open\.qyer\.com\/qyer\/startpage\/ - reject
 ^https?:\/\/open\.qyer\.com\/qyer\/config\/get - reject
 ^https?:\/\/media\.qyer\.com\/ad\/ - reject
-# > 亲宝宝
-^https?:\/\/api\.qbb6\.com\/ad\/ - reject
 
 # R
 # > 人人视频
@@ -341,39 +240,17 @@
 ^https?:\/\/api\.rr\.tv\/ad\/ - reject
 # > 人人影视
 ^https?:\/\/ctrl\.(playcvn|zmzapi)\.(com|net)\/app\/(ads|init) - reject
-# > 日日煮
-^https?:\/\/api\.daydaycook\.com\.cn\/daydaycook\/server\/ad\/ - reject
-^https?:\/\/cms\.daydaycook\.com\.cn\/api\/cms\/advertisement\/ - reject
 
 # S
-# > 搜狐
-^https?:\/\/api\.k\.sohu\.com\/api\/news\/adsense - reject
-^https?:\/\/pic\.k\.sohu\.com\/img8\/wb\/tj\/ - reject
-^https?:\/\/s1\.api\.tv\.itc\.cn\/v4\/mobile\/control\/switch\.json - reject
-^https?:\/\/api\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap - reject
 # > 什么值得买
 ^https?:\/\/api\.smzdm\.com\/v\d\/util\/loading - reject
 ^https?:\/\/app-api\.smzdm\.com\/util\/loading - reject
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php - reject
-# > 四季線上影視4gTV
-^https?:\/\/service\.4gtv\.tv\/4gtv\/Data\/(GetAD|ADLog) - reject
-# > 肆客足球
-^https?:\/\/api\.qiuduoduo\.cn\/guideimage - reject
-# > 识货
-^https?:\/\/www\.shihuo\.cn\/app\d\/saveAppInfo - reject
-# > 首汽约车
-^https?:\/\/gw-passenger\.01zhuanche\.com\/gw-passenger\/car-rest\/webservice\/passenger\/recommendADs - reject
-^https?:\/\/gw-passenger\.01zhuanche\.com\/gw-passenger\/zhuanche-passenger-token\/leachtoken\/webservice\/homepage\/queryADs - reject
 # > 苏宁
 ^https?:\/\/image\.suning\.cn\/uimg\/ma\/ad\/ - reject
-# > 神舟专车
-^https?:\/\/img01\.10101111cdn\.com\/adpos\/ - reject
 # > 扫描全能王
 ^https?:\/\/api\.intsig\.net\/user\/cs\/operating\/app\/get_startpic\/ - reject
-# > 省点
-^https?:\/\/api\.waitwaitpay\.com\/\/api\/splash - reject
-# > 搜狗
-^https?:\/\/business-cdn\.shouji\.sogou\.com\/wapdl\/hole\/.+\.jpg - reject
+
 
 # T
 # > 腾讯
@@ -399,12 +276,6 @@
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/(ad_|advertisement|getappmsgad) - reject
 # > 澎湃新闻
 ^https?:\/\/adpai\.thepaper\.cn\/.+&ad= - reject
-# > 太平洋
-^https?:\/\/agent-count\.pconline\.com\.cn\/counter\/adAnalyse\/ - reject
-^https?:\/\/mrobot\.pconline\.com\.cn\/v\d\/ad2p - reject
-^https?:\/\/mrobot\.pconline\.com\.cn\/s\/onlineinfo\/ad\/ - reject
-^https?:\/\/mrobot\.pcauto\.com\.cn\/v\d\/ad2p - reject
-^https?:\/\/mrobot\.pcauto\.com\.cn\/xsp\/s\/auto\/info\/preload\.xsp - reject
 # > 途牛
 ^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ - reject
 
@@ -433,16 +304,8 @@
 # >> 有道词典
 ^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish - reject
 ^https?:\/\/dsp-impr2\.youdao\.com\/adload.s\? - reject
-# > 微医
-^https?:\/\/app\.wy\.guahao\.com\/json\/white\/dayquestion\/getpopad - reject
 # > Weico
 ^https?:\/\/overseas\.weico\.cc/portal\.php\?a=get_coopen_ads - reject
-# > 无他相机
-^https?:\/\/api-release\.wuta-cam\.com\/ad_tree - reject
-^https?:\/\/res-release\.wuta-cam\.com\/json\/ads_component_cache\.json - reject
-# > 蜗牛睡眠
-^https?:\/\/snailsleep\.net\/snail\/v\d\/screen\/qn\/get\? - reject
-^https?:\/\/snailsleep\.net\/snail\/v\d\/adTask\/ - reject
 # > WiFi共享大师
 ^https?:\/\/nochange\.ggsafe\.com\/ad\/ - reject
 # > 微店
@@ -459,52 +322,21 @@
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(actionad|sdkad)\.php - reject
 ^https?:\/\/wbapp\.uve\.weibo\.com\/wbapplua\/wbpullad\.lua - reject
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads - reject
-# >> 新浪天气通
-^https?:\/\/tqt\.weibo\.cn\/overall\/redirect\.php\?r=tqt_sdkad - reject
-^https?:\/\/tqt\.weibo\.cn\/overall\/redirect\.php\?r=tqtad - reject
-^https?:\/\/tqt\.weibo\.cn\/.+advert\.index - reject
-^https?:\/\/tqt\.weibo\.cn\/api\/advert\/ - reject
-# > 下厨房
-^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
 # > 虾米
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ - reject
-# > 小睡眠
-^https?:\/\/api\.psy-1\.com\/cosleep\/startup - reject
-# > 迅游加速器
-^https?:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/configs\/(splash_ad|ad_urls) - reject
-^https?:\/\/portal-xunyou\.qingcdn\.com\/api\/v\d\/ios\/ads\/ - reject
 # > 喜马拉雅
 ^https?:\/\/\w+\.ximalaya\.com\/api\/v\d\/adRealTime - reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/ting\/preload\/ - reject
-# > 小站
-^https?:\/\/tiku\.zhan\.com\/Common\/newAd\/ - reject
 
 # Y
-# > Yahoo!
-^https?:\/\/m\.yap\.yahoo\.com\/v\d{2}\/getAds\.do - reject
-# > Youtube++
-^https?:\/\/api\.catch\.gift\/api\/v\d\/pagead\/ - reject
-# > 萤石云视频
-^https?:\/\/i\.ys7\.com\/api\/ads - reject
-# > 运动世界
-^https?:\/\/.+\.iydsj\.com\/api\/.+\/ad - reject
-# > 一点万象
-^https?:\/\/app\.mixcapp\.com\/mixc\/api\/v\d\/ad - reject
 # > 印象笔记
 ^https?:\/\/app\.yinxiang\.com\/ads\/ - reject
-# > 云麦好轻
-^https?:\/\/restapi\.iyunmai\.com\/api\/ios\/ad\/ - reject
-# > 育学园
-^https?:\/\/yxyapi\d\.drcuiyutao\.com\/yxy-api-gateway\/api\/json\/advert\/ - reject
 # > 迅雷
 ^https?:\/\/images\.client\.vip\.xunlei\.com\/.+\/advert\/ - reject
 # > 讯飞
 ^https?:\/\/imeclient\.openspeech\.cn\/adservice\/ - reject
 
 # Z
-# > 直播吧
-^https?:\/\/a\.qiumibao\.com\/activities\/config\.php - reject
-^https?:\/\/.+\/allOne\.php\?ad_name - reject
 # > 知乎
 ^https?:\/\/www\.zhihu\.com\/api\/v4\/community-ad\/ - reject
 ^https?:\/\/api\.zhihu\.com\/(launch|real_time) - reject
@@ -519,14 +351,6 @@
 ^https?:\/\/itunes\.apple\.com\/lookup\?id=575826903 - reject
 # > 作业帮
 ^https?:\/\/www\.zybang\.com\/adx\/ - reject
-# > 最右
-^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
-# > 字节跳动
-^https?:\/\/.+\.pstatp\.com\/img\/ad - reject
-^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ - reject
-^https?:\/\/dsp\.toutiao\.com\/api\/xunfei\/ads\/ - reject
-^https?:\/\/.+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
-^https?:\/\/.+/img\/ad\.union\.api\/ - reject
 # > 中国银行
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\? - reject
 # > 中信银行
@@ -544,13 +368,6 @@
 # > 中国移动
 # >> 手机营业厅
 ^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit - reject
-# >> 江苏
-^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query - reject
-# >> 咪咕
-^https?:\/\/gg\w+\.cmvideo\.cn\/v\d\/iflyad\/ - reject
-^https?:\/\/ggic(\d)?\.cmvideo\.cn\/ad\/ - reject
-^https?:\/\/ggx\.cmvideo\.cn\/request\/ - reject
-^https?:\/\/.+\/cdn-adn\/ - reject
 # > 中国联通
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm - reject
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd - reject
