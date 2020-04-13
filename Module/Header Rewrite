@@ -1,6 +1,7 @@
 #!name=Header Rewrite
 #!desc=Header Rewrite
 #!system=ios
+[Header Rewrite]
 # 百度
 ^*.bdimg.com header-del Referer
 # 腾讯
