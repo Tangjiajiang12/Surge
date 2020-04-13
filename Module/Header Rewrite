@@ -1,7 +1,9 @@
 #!name=Header Rewrite
-#!desc=Header Rewrite
+#!desc=302 Redirect & Advertising Block
 #!system=ios
+
 [Header Rewrite]
+
 # 百度
 ^*.bdimg.com header-del Referer
 # 腾讯
