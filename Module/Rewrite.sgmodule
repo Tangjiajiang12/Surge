@@ -10,11 +10,6 @@ hostname = %APPEND% *.amemv.com, *.iydsj.com, *.k.sohu.com, *.tv.sohu.com, *.kak
 
 # Redirect HTTP to HTTPS
 ^https?:\/\/(www.)?taobao\.com\/ https://taobao.com/ 302
-^https?:\/\/(www.)?jd\.com\/ https://www.jd.com/ 302
-^https?:\/\/(www.)?mi\.com\/ https://www.mi.com/ 302
-^https?:\/\/you\.163\.com\/ https://you.163.com/ 302
-^https?:\/\/(www.)?suning\.com/ https://suning.com/ 302
-^https?:\/\/(www.)?yhd\.com https://yhd.com/ 302
 
 # Redirect False to True
 # > IGN China to IGN Global
@@ -74,16 +69,6 @@ hostname = %APPEND% *.amemv.com, *.iydsj.com, *.k.sohu.com, *.tv.sohu.com, *.kak
 # > AbeamTV Unlock
 ^https?:\/\/api\.abema\.io\/v\d\/ip\/check - reject
 # > 阿里巴巴
-# >> 闲鱼
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome\/ - reject
-# >> 飞猪
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources\/ - reject
-# >> 淘票票
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ - reject
-# >> 口碑
-^https?:\/\/render\.alipay\.com\/p\/s\/h5data\/prod\/spring-festival-2019-h5data\/popup-h5data\.json - reject
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get\/ - reject
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get\/ - reject
 # >> 高德地图
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ - reject
 
@@ -110,18 +95,11 @@ hostname = %APPEND% *.amemv.com, *.iydsj.com, *.k.sohu.com, *.tv.sohu.com, *.kak
 
 # J
 # > 京东
-^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ - reject
-^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo - reject
-^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture - reject
 
 # > 金山 WPS
-^https?:\/\/ios\.wps\.cn\/ad-statistics-service - reject
-^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ - reject
-^https?:\/\/\w+\.kingsoft-office-service\.com\/ad - reject
 
 # K
 # > Keep
-^https?:\/\/api\.gotokeep\.com\/ads - reject
 
 # L
 
@@ -132,8 +110,6 @@ hostname = %APPEND% *.amemv.com, *.iydsj.com, *.k.sohu.com, *.tv.sohu.com, *.kak
 ^https?:\/\/p\d\.meituan\.net\/movie\/[A-Za-z0-9]+\.jpg\?may_covertWebp - reject
 ^https?:\/\/s3plus\.meituan\.net\/.+\/linglong\/.+\.(gif|jpg|mp4) - reject
 # > 马蜂窝
-^https?:\/\/mapi\.mafengwo\.cn\/ad\/ - reject
-^https?:\/\/mapi\.mafengwo\.cn\/travelguide\/ad\/ - reject
 
 # N
 
@@ -141,7 +117,6 @@ hostname = %APPEND% *.amemv.com, *.iydsj.com, *.k.sohu.com, *.tv.sohu.com, *.kak
 
 # P
 # > 拼多多
-^https?:\/\/api\.yangkeduo\.com\/api\/cappuccino\/splash - reject
 
 # Q
 
@@ -181,25 +156,21 @@ URL-REGEX,^https:\/\/pic\d\.zhimg\.com\/70\/
 URL-REGEX,https://(api|www).zhihu.com/(ab|adx|fringe|commercial|ad-style-service|.*(recommendations|extended|featured-comment-ad)|api/v4/mcn/)
 AND,((USER-AGENT,osee2*), (OR,((IP-CIDR,0.0.0.0/0,no-resolve),(IP-CIDR6,::/0,no-resolve))))
 # > 中国银行
-^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\? - reject
+
 # > 中信银行
-^https?:\/\/m\.creditcard\.ecitic\.com\/citiccard\/mbk\/.+\/appStartAdv - reject
+t
 # > 中国工商银行
 ^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ - reject
 # > 中国招商银行
-^https?:\/\/mlife\.cmbchina\.com\/ClientFaceService\/preCacheAdvertise\.json - reject
-^https?:\/\/mlife\.cmbchina\.com\/ClientFaceService\/getAdvertisement\.json - reject
-^https?:\/\/pic1cdn\.cmbchina\.com\/appinitads\/ - reject
+
 # > 中国民生银行
-^https?:\/\/www\.cmbc\.com\.cn\/m\/image\/loadingpage\/ - reject
+
 # > 中国广发银行
-^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/.{25}\.jpg - reject
+
 # > 中国移动
 # >> 手机营业厅
 ^https?:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit - reject
 # > 中国联通
-^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/accountListData\.htm - reject
-^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd - reject
 
 [Header Rewrite]
 ^*.qpic.cn header-replace User-Agent "WeChat/6.5.22.32 CFNetwork/889.9 Darwin/17.2.0"
