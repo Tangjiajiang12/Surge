@@ -1,4 +1,4 @@
-#!name=URL Rewrite
+#!name=Rewrite
 #!desc=重写请求的 URL，或者通过 URL 拒绝某些请求。
 
 [MITM]
